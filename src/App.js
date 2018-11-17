@@ -11,15 +11,6 @@ class App extends Component {
     otherState : 'Bla bla',
     showPersons : false
   }
-  // switchNameHandler = (newName) => {
-  //   this.setState({
-  //     person : [
-  //       { name: newName, age: '21'},
-  //       { name: 'MP', age: '34'},
-  //       { name: "C", age: "55" }
-  //     ]
-  //   })
-  // }
   deletePersonHandler = (index) => {
     const newPersons = this.state.person;
     newPersons.splice(index, 1);
@@ -45,7 +36,7 @@ class App extends Component {
   }
   render() {
     const S = {
-      backgroundColor: 'blue',
+      backgroundColor: 'green',
       color: 'white',
       padding: '8px',
       cursor: 'pointer' 
@@ -58,15 +49,10 @@ class App extends Component {
           this.state.person.map((per,index) =>{
             return <Person click = {() => this.deletePersonHandler(index)} name = {per.name} age={per.age} key={per.id} change={(event) => this.nameChangedHandler(event, per.id)}/>
           })
-        /* <Person name={this.state.person[0].name} age = {this.state.person[0].age}/>
-        <Person name={this.state.person[1].name} 
-        age = {this.state.person[1].age} 
-        click={this.switchNameHandler.bind(this, 'Pammy')} 
-        change={this.nameChangedHandler}>Hobby</Person>
-        <Person name={this.state.person[2].name} age = {this.state.person[2].age}/> */
         }
         </div>
       );
+      S.backgroundColor = 'red';
     }
     return (
       <div className="App">
