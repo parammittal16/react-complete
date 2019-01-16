@@ -6,6 +6,8 @@
 }
 
 .NavigationItem a {
+    font-family: 'Inter UI Medium';
+    font-size: 0.9rem;
     color: #8F5C2C;
     text-decoration: none;
     width: 100%;

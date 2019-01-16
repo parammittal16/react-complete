@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
+import * as actions from '../../store/actions/index';
+import { updateObject, checkValidity } from '../../shared/utility';
+
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
 import Spinner from '../../components/UI/Spinner/Spinner';
+
+import formClass from '../../components/UI/Form/Form.module.css';
 import classes from './Auth.module.css';
-import * as actions from '../../store/actions/index';
-import { updateObject, checkValidity } from '../../shared/utility';
+
+import burgerIcon from '../../assets/images/hamburger-icon.png';
 
 class Auth extends Component {
     state = {
@@ -114,13 +119,14 @@ class Auth extends Component {
             <div className={classes.Auth}>
                 {authRedirect}
                 {errorMessage}
-                <form onSubmit={this.submitHandler}>
+                <img width={80} src={burgerIcon} alt="Hamburger Icon" />
+                <form className={formClass} onSubmit={this.submitHandler}>
                     {form}
-                    <Button btnType="Success">SUBMIT</Button>
+                    <Button btnType="Success">Submit</Button>
                 </form>
                 <Button
                     clicked={this.switchAuthModeHandler}
-                    btnType="Danger">SWITCH TO {this.state.isSignup ? 'SIGNIN' : 'SIGNUP'}</Button>
+                    btnType="Danger">Switch to {this.state.isSignup ? 'SignIn' : 'SignUp'}</Button>
             </div>
         );
     }

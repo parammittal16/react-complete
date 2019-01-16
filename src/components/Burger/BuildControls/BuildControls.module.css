@@ -1,6 +1,6 @@
 .BuildControls {
     width: 100%;
-    background-color: #CF8F2E;
+    background-color: #ffcc4d;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -9,29 +9,44 @@
     padding: 10px 0;
 }
 
+.BuildControls p {
+    font-size: 1rem;
+    font-family: "Inter UI Medium";
+}
+
 .OrderButton {
-    background-color: #DAD735;
+    background-color: #dd2e44;
     outline: none;
     cursor: pointer;
-    border: 1px solid #966909;
-    color: #966909;
-    font-family: inherit;
-    font-size: 1.2em;
+    color: #FFFFFF;
+    font-weight: normal;
+    font-size: 0.9rem;
+    font-family: "Inter UI Medium";
     padding: 15px 30px;
-    box-shadow: 2px 2px 2px #966909;
+    border: none;
+    border-radius: 5px;
 }
 
 .OrderButton:hover, .OrderButton:active {
-    background-color: #A0DB41;
-    border: 1px solid #966909;
-    color: #966909;
+    background-color: #77b255;
 }
 
 .OrderButton:disabled {
+    color: white;
     background-color: #C7C6C6;
     cursor: not-allowed;
-    border: 1px solid #ccc;
     color: #888888;
+    font-weight: normal;
+    font-size: 0.9rem;
+    font-family: "Inter UI Medium";
+    border: none;
+    border-radius: 5px;
+}
+
+.currentPrice {
+    font-weight: normal;
+    font-size: 0.9rem;
+    font-family: "Inter UI Medium";
 }
 
 .OrderButton:not(:disabled) {

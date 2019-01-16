@@ -1,18 +1,16 @@
 .Button {
-    background-color: transparent;
-    border: none;
-    color: white;
     outline: none;
+    width: 160px;
+    height: 45px;
+    font-weight: normal;
+    font-size: 0.9rem;
+    font-family: "Inter UI Medium";
+    border: none;
+    border-radius: 5px;
+    background-color: #39404a;
+    color: white;
     cursor: pointer;
-    font: inherit;
-    padding: 10px;
-    margin: 10px;
-    font-weight: bold;
-}
-
-.Button:first-of-type {
-    margin-left: 0;
-    padding-left: 0;
+    margin-top: 25px;
 }
 
 .Button:disabled {
@@ -21,9 +19,9 @@
 }
 
 .Success {
-    color: #5C9210;
+    background-color: #77b255;
 }
 
 .Danger {
-    color: #944317;
+    background-color: #dd2e44;
 }
