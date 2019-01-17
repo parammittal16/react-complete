@@ -1,6 +1,4 @@
 .Burger {
-    width: 100%;
-    margin: auto;
     height: 250px;
     overflow: scroll;
     text-align: center;
@@ -10,6 +8,9 @@
 
 @media (min-width: 500px) and (min-height: 400px) {
     .Burger {
+        margin-left:80px;
+        margin-right:80px;
+        float:left;
         width: 350px;
         height: 300px;
     }
